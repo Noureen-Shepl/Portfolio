@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noureen Hazem | AI Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--navy:#071b33;--navy2:#0b2948;--blue:#123f67;--baby:#8bdcff;--baby2:#bcecff;--light:#edf8ff;--text:#f7fbff;--muted:#a9bfd1;--card:rgba(13,49,80,.55);--border:rgba(139,220,255,.16)}
+body{font-family:"DM Sans",sans-serif;background:linear-gradient(180deg,#071b33 0%,#091f38 50%,#06182d 100%);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,88%);margin:auto}
+section{padding:82px 0}
+.section-label{color:var(--baby);font-size:12px;letter-spacing:3px;font-weight:600;margin-bottom:12px}
+.section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(32px,4vw,47px);letter-spacing:-1px;margin-bottom:36px}
+
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#071b33 0%,#0a3154 55%,#0d426c 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(139,220,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(139,220,255,.045) 1px,transparent 1px);background-size:55px 55px;animation:gridMove 18s linear infinite}
+@keyframes gridMove{0%{background-position:0 0}100%{background-position:55px 55px}}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(75px);opacity:.5;pointer-events:none}
+.glow-one{width:420px;height:420px;background:#36bde9;right:-90px;top:-90px;animation:floatOne 8s ease-in-out infinite}
+.glow-two{width:300px;height:300px;background:#477dff;left:-80px;bottom:-100px;animation:floatTwo 10s ease-in-out infinite}
+.glow-three{width:240px;height:240px;background:#8bdcff;right:25%;bottom:-130px;opacity:.2;animation:floatThree 9s ease-in-out infinite}
+@keyframes floatOne{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,80px)}}
+@keyframes floatTwo{0%,100%{transform:translate(0,0)}50%{transform:translate(80px,-60px)}}
+@keyframes floatThree{0%,100%{transform:translateY(0)}50%{transform:translateY(-100px)}}
+.particles{position:absolute;inset:0;pointer-events:none}
+.particle{position:absolute;width:5px;height:5px;background:var(--baby);border-radius:50%;box-shadow:0 0 12px var(--baby);opacity:.55;animation:particleFloat 7s ease-in-out infinite}
+.p1{left:12%;top:20%;animation-delay:0s}.p2{left:28%;top:70%;animation-delay:1s}.p3{left:70%;top:25%;animation-delay:2s}.p4{left:82%;top:65%;animation-delay:3s}.p5{left:55%;top:78%;animation-delay:4s}.p6{left:92%;top:35%;animation-delay:1.5s}.p7{left:42%;top:15%;animation-delay:2.5s}
+@keyframes particleFloat{0%,100%{transform:translateY(0) scale(1);opacity:.35}50%{transform:translateY(-35px) scale(1.5);opacity:.9}}
+.hero-content{position:relative;z-index:3;max-width:850px}
+.mini-title{color:var(--baby);font-size:12px;letter-spacing:4px;font-weight:600;margin-bottom:20px}
+.hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(52px,7vw,86px);line-height:.9;letter-spacing:-4px;margin-bottom:25px}
+.hero .surname{color:var(--baby2)}
+.hero-subtitle{font-family:"Space Grotesk",sans-serif;font-size:clamp(21px,2.5vw,30px);line-height:1.25;max-width:800px;margin-bottom:18px}
+.hero-subtitle span{color:var(--baby)}
+.hero-description{color:#bdd1df;font-size:16px;line-height:1.75;max-width:700px;margin-bottom:27px}
+.contact-button{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border:1px solid var(--baby);border-radius:50px;color:var(--baby2);font-size:15px;font-weight:600;transition:.3s;background:rgba(139,220,255,.05)}
+.contact-button:hover{background:var(--baby);color:var(--navy);transform:translateY(-3px);box-shadow:0 10px 30px rgba(139,220,255,.18)}
+
+/* ABOUT */
+.about-section{background:linear-gradient(180deg,#081d35,#0a2541)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start}
+.about-big{font-family:"Space Grotesk",sans-serif;font-size:clamp(27px,3vw,38px);line-height:1.25;position:sticky;top:40px}
+.about-big span{color:var(--baby)}
+.about-story{color:var(--muted);font-size:16px;line-height:1.9}
+.about-story p{margin-bottom:17px}
+.about-story .highlight{color:var(--light);font-weight:500}
+.story-line{display:flex;gap:15px;margin-top:25px;padding:18px 20px;border-left:2px solid var(--baby);background:rgba(139,220,255,.04);border-radius:0 12px 12px 0}
+.story-line i{color:var(--baby);margin-top:5px}
+.story-line p{margin:0;color:#c3d7e5}
+
+/* SKILLS */
+.skills-section{background:#081d35}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.skill{padding:24px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,rgba(20,68,105,.5),rgba(8,35,61,.5));transition:.3s}
+.skill:hover{transform:translateY(-4px);border-color:rgba(139,220,255,.45);background:rgba(21,72,109,.65)}
+.skill-icon{width:41px;height:41px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(139,220,255,.1);color:var(--baby);font-size:18px;margin-bottom:17px}
+.skill h3{font-family:"Space Grotesk",sans-serif;font-size:19px;margin-bottom:9px}
+.skill p{color:var(--muted);font-size:14px;line-height:1.7}
+
+/* PROJECTS */
+.projects-section{background:linear-gradient(180deg,#081d35,#0a2745)}
+.projects-wrapper{display:flex;flex-direction:column;gap:15px}
+.project{display:grid;grid-template-columns:65px 1fr;gap:20px;padding:29px;border:1px solid var(--border);border-radius:17px;background:rgba(9,38,66,.7);transition:.3s}
+.project:hover{transform:translateX(5px);border-color:rgba(139,220,255,.45);background:rgba(13,49,82,.8)}
+.project-number{font-family:"Space Grotesk",sans-serif;font-size:28px;color:rgba(139,220,255,.5);font-weight:700}
+.project h3{font-family:"Space Grotesk",sans-serif;font-size:clamp(21px,2.5vw,28px);margin-bottom:9px}
+.project-description{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:15px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{padding:5px 10px;border:1px solid var(--border);border-radius:50px;color:#bdd7e7;font-size:11px;background:rgba(139,220,255,.035)}
+.project-link{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-top:18px;
+color:var(--baby);
+font-size:13px;
+font-weight:600;
+transition:.3s
+}
+.project-link:hover{
+gap:12px;
+color:var(--baby2)
+}
+
+/* SERVICES */
+.services-section{background:linear-gradient(180deg,#0a2745,#09233e)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service-card{position:relative;padding:25px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,rgba(20,68,105,.5),rgba(8,35,61,.5));transition:.3s;overflow:hidden}
+.service-card::before{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(139,220,255,.08);right:-30px;top:-30px;transition:.3s}
+.service-card:hover{transform:translateY(-5px);border-color:rgba(139,220,255,.5);background:rgba(21,72,109,.65)}
+.service-card:hover::before{transform:scale(1.5)}
+.service-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(139,220,255,.1);color:var(--baby);font-size:18px;margin-bottom:17px}
+.service-card h3{font-family:"Space Grotesk",sans-serif;font-size:19px;margin-bottom:9px}
+.service-card p{color:var(--muted);font-size:14px;line-height:1.7}
+.service-number{position:absolute;right:18px;bottom:10px;font-family:"Space Grotesk",sans-serif;font-size:28px;font-weight:700;color:rgba(139,220,255,.08)}
+
+/* CERTIFICATES */
+.cert-section{background:#09233e}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.cert-card{position:relative;padding:25px;border:1px solid var(--border);border-radius:17px;background:rgba(8,32,56,.65);transition:.3s}
+.cert-card:hover{transform:translateY(-4px);border-color:rgba(139,220,255,.45)}
+.company{color:var(--baby);font-size:11px;letter-spacing:2px;font-weight:600;margin-bottom:9px}
+.cert-card h3{font-family:"Space Grotesk",sans-serif;font-size:20px;margin-bottom:6px}
+.cert-card p{color:var(--muted);font-size:13px}
+.cert-icon{position:absolute;right:20px;bottom:17px;color:rgba(139,220,255,.15);font-size:30px}
+
+/* EDUCATION */
+.education-section{background:linear-gradient(180deg,#09233e,#081d35)}
+.education-card{padding:30px;border-left:2px solid var(--baby);background:linear-gradient(90deg,rgba(139,220,255,.06),transparent)}
+.education-year{color:var(--baby);font-size:12px;letter-spacing:2px;margin-bottom:7px}
+.education-card h3{font-family:"Space Grotesk",sans-serif;font-size:28px;margin-bottom:4px}
+.education-card h4{font-size:16px;font-weight:500;color:#d9eaf4;margin-bottom:3px}
+.education-card p{color:var(--muted);font-size:14px;margin-top:9px}
+
+/* CONTACT */
+.contact{min-height:72vh;display:flex;align-items:center;background:linear-gradient(135deg,#071b33,#0b3153)}
+.contact-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(38px,5vw,61px);line-height:1;letter-spacing:-2px;max-width:750px}
+.contact-title span{color:var(--baby)}
+.contact-description{color:var(--muted);font-size:15px;line-height:1.7;max-width:620px;margin:20px 0 28px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;max-width:850px}
+.contact-item{display:flex;align-items:center;gap:13px;padding:16px;border:1px solid var(--border);border-radius:13px;background:rgba(139,220,255,.035);transition:.3s}
+.contact-item:hover{transform:translateY(-3px);border-color:var(--baby);background:rgba(139,220,255,.08)}
+.contact-icon{width:41px;height:41px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(139,220,255,.1);color:var(--baby);font-size:17px}
+.contact-item small{display:block;color:var(--muted);font-size:10px;margin-bottom:1px}
+.contact-item strong{font-size:13px}
+footer{background:#06172a;border-top:1px solid var(--border);padding:22px 0;text-align:center;color:#7895aa;font-size:11px}
+@media(max-width:800px){
+section{padding:62px 0}
+.about-grid,.skills-grid,.services-grid,.cert-grid,.contact-grid{grid-template-columns:1fr}
+.about-grid{gap:28px}
+.about-big{position:static}
+.project{grid-template-columns:1fr}
+.hero{min-height:85vh}
+.hero h1{font-size:54px}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="hero-glow glow-one"></div>
+<div class="hero-glow glow-two"></div>
+<div class="hero-glow glow-three"></div>
+<div class="particles"><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><span class="particle p4"></span><span class="particle p5"></span><span class="particle p6"></span><span class="particle p7"></span></div>
+<div class="container hero-content">
+<div class="mini-title">AI ENGINEERING × DATA</div>
+<h1>NOUREEN<br><span class="surname">HAZEM</span></h1>
+<div class="hero-subtitle">AI Engineering Student exploring <span>Artificial Intelligence</span>, Data & Intelligent Systems.</div>
+<p class="hero-description">Driven by curiosity, technology and the desire to understand how things work. I'm building my journey at the intersection of AI, data, programming and engineering.</p>
+<a href="#contact" class="contact-button">Contact Me <i class="fa-solid fa-arrow-down"></i></a>
+</div>
+</section>
+
+<section id="about" class="about-section">
+<div class="container">
+<div class="section-label">01 / MY STORY</div>
+<h2 class="section-title">About Me</h2>
+<div class="about-grid">
+<div class="about-big">It started with a simple question:<br><span>“How does this actually work?”</span></div>
+<div class="about-story">
+<p>My interest in technology didn't start when I entered university. <span class="highlight">I've been curious about technology and the way things work since I was young.</span> I was always interested in exploring what's behind the systems, devices and digital experiences we use every day.</p>
+<p>Over time, I realized that I didn't only enjoy using technology — <span class="highlight">I enjoyed understanding it.</span> I naturally found myself analyzing things around me, breaking problems into smaller pieces, looking for patterns and asking why something works the way it does.</p>
+<p>That curiosity gradually became a real interest in <span class="highlight">Artificial Intelligence, data and programming.</span> What fascinated me most about AI was the idea that technology could learn from information, recognize patterns and help solve problems in intelligent ways.</p>
+<p>Today, I'm studying <span class="highlight">Artificial Intelligence Engineering at Tanta University</span>, where I'm building my foundation in Python, problem solving, programming, digital logic and AI concepts. At the same time, I keep learning outside the classroom through technical courses, programming challenges and hands-on projects.</p>
+<p>I'm especially interested in the connection between <span class="highlight">AI and Data Analysis</span> because it combines two things I genuinely enjoy: understanding information and using technology to turn that understanding into something useful.</p>
+<div class="story-line"><i class="fa-solid fa-arrow-trend-up"></i><p>For me, this portfolio isn't just a collection of projects. It's a record of a journey I'm still building — one problem, one dataset and one new idea at a time.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="skills-section">
+<div class="container">
+<div class="section-label">02 / SKILLS</div>
+<h2 class="section-title">Technical Toolkit</h2>
+<div class="skills-grid">
+<div class="skill"><div class="skill-icon"><i class="fa-brands fa-python"></i></div><h3>Programming</h3><p>Python<br>C / C++ Fundamentals<br>Programming Fundamentals</p></div>
+<div class="skill"><div class="skill-icon"><i class="fa-solid fa-brain"></i></div><h3>Artificial Intelligence</h3><p>AI Foundations<br>Intelligent Systems Concepts<br>Data-Driven Technologies</p></div>
+<div class="skill"><div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Data</h3><p>Python Data Processing<br>File Handling<br>Word Frequency Analysis</p></div>
+<div class="skill"><div class="skill-icon"><i class="fa-solid fa-code"></i></div><h3>Problem Solving</h3><p>Algorithmic Thinking<br>Structured Problem Solving<br>Programming Challenges</p></div>
+<div class="skill"><div class="skill-icon"><i class="fa-solid fa-microchip"></i></div><h3>Digital Logic</h3><p>Boolean Logic<br>K-Maps<br>Flip-Flops<br>Sequence Detector Design</p></div>
+<div class="skill"><div class="skill-icon"><i class="fa-solid fa-gears"></i></div><h3>Engineering Foundations</h3><p>Binary / Decimal / Hexadecimal Conversions<br>Basic Electronics<br>Computer Programming</p></div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="projects-section">
+<div class="container">
+<div class="section-label">03 / PROJECTS</div>
+<h2 class="section-title">Selected Work</h2>
+
+<div class="projects-wrapper">
+
+<div class="project">
+<div class="project-number">01</div>
+<div>
+<h3>Exploratory Data Analysis & Visualization</h3>
+<p class="project-description">
+Worked with structured datasets using Python and Pandas to explore, clean and analyze data. Handled missing values, applied descriptive statistics and created visualizations to identify patterns and better understand the data.
+</p>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">Pandas</span>
+<span class="tag">Data Cleaning</span>
+<span class="tag">EDA</span>
+<span class="tag">Matplotlib</span>
+<span class="tag">Statistics</span>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-number">02</div>
+<div>
+<h3>Interactive Tech Repair Shop System</h3>
+<p class="project-description">
+A terminal-based repair shop management system developed with Python and Object-Oriented Programming. The system allows users to view repair services, add services to customer invoices, calculate service costs and generate a final bill.
+</p>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">OOP</span>
+<span class="tag">Abstraction</span>
+<span class="tag">Inheritance</span>
+<span class="tag">Encapsulation</span>
+<span class="tag">Polymorphism</span>
+</div>
+
+<a href="https://github.com/Noureen-Shepl/tech-repair-shop-terminal"
+target="_blank"
+rel="noopener noreferrer"
+class="project-link">
+View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+
+</div>
+</div>
+
+<div class="project">
+<div class="project-number">03</div>
+<div>
+<h3>Dark Detector Circuit</h3>
+<p class="project-description">
+Worked with a team to design and implement an automatic dark detection circuit using an LDR and an NPN transistor. The circuit detects low-light conditions and automatically activates an LED when darkness is detected.
+</p>
+<div class="tags">
+<span class="tag">Electronics</span>
+<span class="tag">LDR</span>
+<span class="tag">NPN Transistor</span>
+<span class="tag">Circuit Design</span>
+<span class="tag">Breadboard</span>
+</div>
+
+<a href="dark-detector.html" class="project-link">
+View Project <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+</div>
+
+<div class="project">
+<div class="project-number">04</div>
+<div>
+<h3>1101 Sequence Detector — Digital Logic Design</h3>
+<p class="project-description">
+Designed a Mealy-based digital system capable of detecting the binary sequence 1101. Developed the state transitions, derived D flip-flop equations, simplified the logic using K-maps and explored the circuit implementation.
+</p>
+<div class="tags">
+<span class="tag">Digital Logic</span>
+<span class="tag">Mealy Machine</span>
+<span class="tag">State Machine</span>
+<span class="tag">K-Maps</span>
+<span class="tag">D Flip-Flops</span>
+<span class="tag">Circuit Design</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="services" class="services-section">
+<div class="container">
+<div class="section-label">04 / SERVICES</div>
+<h2 class="section-title">What I Can Do</h2>
+<div class="services-grid">
+<div class="service-card"><div class="service-icon"><i class="fa-solid fa-broom"></i></div><h3>Data Cleaning & Preparation</h3><p>Cleaning and organizing datasets, handling missing values and preparing data for further analysis.</p><div class="service-number">01</div></div>
+<div class="service-card"><div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><h3>Exploratory Data Analysis</h3><p>Exploring datasets using Python to understand distributions, patterns and important insights within the data.</p><div class="service-number">02</div></div>
+<div class="service-card"><div class="service-icon"><i class="fa-solid fa-chart-column"></i></div><h3>Data Visualization</h3><p>Creating clear charts and visualizations with Matplotlib to communicate patterns and findings effectively.</p><div class="service-number">03</div></div>
+<div class="service-card"><div class="service-icon"><i class="fa-brands fa-python"></i></div><h3>Python Data Processing</h3><p>Using Python for file handling, text processing, data manipulation and other data-related programming tasks.</p><div class="service-number">04</div></div>
+<div class="service-card"><div class="service-icon"><i class="fa-solid fa-code"></i></div><h3>Python Programming</h3><p>Developing structured Python solutions for programming tasks using logical thinking and problem-solving techniques.</p><div class="service-number">05</div></div>
+<div class="service-card"><div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div><h3>Data Analysis with Python</h3><p>Analyzing and exploring datasets using Python to discover patterns, summarize information and extract meaningful insights.</p><div class="service-number">06</div></div>
+</div>
+</div>
+</section>
+
+<section id="certifications" class="cert-section">
+<div class="container">
+<div class="section-label">05 / CERTIFICATIONS</div>
+<h2 class="section-title">Credentials</h2>
+<div class="cert-grid">
+<div class="cert-card"><div class="company">HACKERRANK</div><h3>Python (Basic)</h3><p>Certificate of Accomplishment · 2026</p><i class="fa-brands fa-python cert-icon"></i></div>
+<div class="cert-card"><div class="company">HACKERRANK</div><h3>Problem Solving (Intermediate)</h3><p>Certificate of Accomplishment · 2026</p><i class="fa-solid fa-code cert-icon"></i></div>
+<div class="cert-card"><div class="company">HACKERRANK</div><h3>Problem Solving (Basic)</h3><p>Certificate of Accomplishment · 2026</p><i class="fa-solid fa-terminal cert-icon"></i></div>
+<div class="cert-card"><div class="company">ORACLE UNIVERSITY</div><h3>AI for You</h3><p>Course Completed · 2026</p><i class="fa-solid fa-brain cert-icon"></i></div>
+</div>
+</div>
+</section>
+
+<section id="education" class="education-section">
+<div class="container">
+<div class="section-label">06 / EDUCATION</div>
+<h2 class="section-title">Education</h2>
+<div class="education-card">
+<div class="education-year">2024 — 2029</div>
+<h3>Tanta University</h3>
+<h4>Faculty of Engineering</h4>
+<h4>Artificial Intelligence Department</h4>
+<p>Relevant areas include Python Programming, Problem Solving, Digital Logic Design and Computer Programming.</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-label">07 / CONTACT</div>
+<h2 class="contact-title">Let's build something <span>intelligent.</span></h2>
+<p class="contact-description">Interested in AI, Data, learning opportunities, collaborations and technical projects. Feel free to reach out.</p>
+<div class="contact-grid">
+<a href="https://www.linkedin.com/in/noureen-hazem" target="_blank" class="contact-item"><div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div><div><small>LinkedIn</small><strong>Noureen Hazem</strong></div></a>
+<a href="https://github.com/Noureen-Shepl" target="_blank" class="contact-item"><div class="contact-icon"><i class="fa-brands fa-github"></i></div><div><small>GitHub</small><strong>Noureen-Shepl</strong></div></a>
+<a href="mailto:nonohazem8@gmail.com" class="contact-item"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><small>Email</small><strong>nonohazem8@gmail.com</strong></div></a>
+<a href="https://wa.me/201205475222" target="_blank" class="contact-item"><div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div><div><small>WhatsApp</small><strong>+20 120 547 5222</strong></div></a>
+</div>
+</div>
+</section>
+
+<footer><div class="container">© 2026 Noureen Hazem · AI Engineering Portfolio</div></footer>
+</body>
+</html>
